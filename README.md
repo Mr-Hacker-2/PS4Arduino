@@ -53,3 +53,21 @@ And that's about it! You can take a look at [this example](https://github.com/Fl
 - Arduino Leonardo ETH
 - Arduino Micro
 - Arduino Esplora
+
+
+## Setup checklist
+
+1. Install the compatible **PS4Arduino-AVR core** using its own installation instructions.
+2. Select the board entry provided by that core in the Arduino IDE.
+3. Install this library and open `examples/usage_example.ino`.
+4. Compile for the supported board before connecting it to a console.
+5. Keep `PS4controller.maintainConnection()` running frequently in your main loop, as the example demonstrates.
+
+## Troubleshooting
+
+- **Board option is missing:** confirm the custom core was installed in the correct Arduino hardware directory, then restart the IDE.
+- **Compilation fails:** check that the selected board is supported and that the installed core version matches the library.
+- **Controller disconnects:** make sure the loop calls `maintainConnection()` regularly; long blocking delays can prevent timely connection maintenance.
+- **Inputs behave unexpectedly:** test one control at a time and use the documented value ranges (joystick axes and triggers use values from 0 to 255; 128 is joystick center).
+
+This library relies on a compatible custom core; it is not a plug-and-play replacement for every Arduino board.
