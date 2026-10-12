@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/readme-banner.svg" alt="PS4Arduino project banner" width="100%" />
+</p>
+
 # PS4Arduino
 This library will allow you to turn your Arduino into a controller fully compatible with PS4!
 
